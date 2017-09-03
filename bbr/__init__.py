@@ -1,4 +1,4 @@
-import sys
+import sys, requests
 from ksamsok import KSamsok
 
 culturalSerach = KSamsok('test')
@@ -56,3 +56,19 @@ def get_item_type(uri):
     # if the function is still running throw an value error (item did not exist)
     raise ValueError('Could not resolve type (invalid URI or URL?)', uri)
     sys.exit(1)
+
+'''
+NOTES
+
+Use a head request to avoid downloading the response body
+'''
+def validate_uri(uri):
+    global culturalSerach
+    url = culturalSerach.formatUri(uri, 'rawurl')
+
+     r = requests.head(url)
+
+    if 200 <= r.status_code <= 399:
+        return True
+    else:
+        return False

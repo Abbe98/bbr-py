@@ -5,7 +5,7 @@ repo = 'bbr-py'
 setup(
   name = 'bbr',
   packages = ['bbr'],
-  install_requires = ['ksamsok'],
+  install_requires = ['ksamsok', 'requests'],
   version = version,
   description = 'Package to work with URIs from Bebyggelseregistret.',
   author = 'Albin Larsson',
