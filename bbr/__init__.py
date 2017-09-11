@@ -50,7 +50,7 @@ def get_item_type(uri):
 
     if item_type == 'Bebyggelse - miljö':
         return 'm'
-    
+
     # if the function is still running throw an value error (item did not exist)
     raise ValueError('Could not resolve type (invalid URI or URL?)', uri)
     sys.exit(1)
@@ -64,7 +64,7 @@ def validate_uri(uri):
     global culturalSerach
     url = culturalSerach.formatUri(uri, 'rawurl')
 
-     r = requests.head(url)
+    r = requests.head(url)
 
     if 200 <= r.status_code <= 399:
         return True
