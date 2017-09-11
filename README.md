@@ -1,8 +1,8 @@
 # BBR-PY
 
-A Python library to determine the type of an item from Bebyggelseregistret given its URI.
+A Python library to work with URIs from Bebyggelseregistret.
 
-BBR-PY can determine the item type using only its URI in 95% of all cases for the other 5% it falls back to making a HTTP lookup.
+BBR-PY can determine the item type using only its URI in 95% of all cases for the other 5% it falls back to making a HTTP lookup. BBR-PY can also get turn a local id into an Kulturarvsdata compatible URI as well as validate such.
 
 ## Installation
 
@@ -21,8 +21,14 @@ BBR items can be of three possible types:
 ```python
 import bbr
 
-# return 'b', 'a' or 'm'
+# returns 'b', 'a', or 'm'
 bbr.get_item_type('<URI>')
+
+#returns True or False
+bbr.validate_uri(<URI>)
+
+# returns an Kulturarvsdata compatible URI as a string
+bbr.get_full_uri_from_local_id(<ID>)
 ```
 
 BBR-PY can handle all types of URIs and URLs used by kulturarvsdata.se:
