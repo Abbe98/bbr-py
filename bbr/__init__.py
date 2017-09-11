@@ -19,9 +19,7 @@ To determine the last ones one has to make a HTTP call to the item and check the
 TODO
 
 Investigate if there is any URIs specifying the type at the database declaration that does not follow the numbering practice.
-
 '''
-
 def get_item_type(uri):
     global culturalSerach
     raw_uri = culturalSerach.formatUri(uri, 'raw')
@@ -87,7 +85,6 @@ The numbering standard described for the `get_item_type` function does apply bot
 TODO
 Validate the order of how common each prefix is.
 Validate that there is no cases where a verbose prefix has a local id not following the sane numbering standard.
-
 '''
 def get_full_uri_from_local_id(local_id):
     type_bad = 'raa/bbr/' + local_id
