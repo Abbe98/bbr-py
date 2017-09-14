@@ -25,10 +25,10 @@ import bbr
 bbr.get_item_type('<URI>')
 
 #returns True or False
-bbr.validate_uri(<URI>)
+bbr.validate_uri('<URI>')
 
 # returns an Kulturarvsdata compatible URI as a string
-bbr.get_full_uri_from_local_id(<ID>)
+bbr.get_full_uri_from_local_id('<ID>')
 ```
 
 BBR-PY can handle all types of URIs and URLs used by kulturarvsdata.se:
