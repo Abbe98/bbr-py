@@ -90,7 +90,7 @@ def get_full_uri_from_local_id(local_id):
     type_bad = 'raa/bbr/' + local_id
     type_b = 'raa/bbrb/' + local_id
     type_a = 'raa/bbra/' + local_id
-    type_m + 'raa/bbrm/' + local_id
+    type_m = 'raa/bbrm/' + local_id
 
     if local_id.startswith('214'):
         if validate_uri(type_b):
