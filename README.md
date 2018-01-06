@@ -12,10 +12,12 @@ pip install bbr
 
 ## Usage
 
-BBR items can be of three possible types:
+BBR items can be of five possible types:
 
  - Building (`b`)
  - Facility (`a`)
+ - Person (`p`)
+ - Organization (`o`)
  - Environment (`m`)
 
 ```python
